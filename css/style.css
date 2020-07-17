@@ -1,0 +1,250 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+/* http://meyerweb.com/eric/tools/css/reset/
+   v5.0.1 | 20191019
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, menu, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+main, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, menu, nav, section {
+  display: block; }
+
+/* HTML5 hidden-attribute fix for newer browsers */
+*[hidden] {
+  display: none; }
+
+body {
+  line-height: 1; }
+
+menu, ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+html,
+body {
+  background-color: #192B43;
+  color: #fff;
+  font-family: "Quicksand", sans-serif;
+  cursor: default;
+  scroll-behavior: smooth; }
+
+.header {
+  height: 100vh;
+  position: relative; }
+  .header .container {
+    position: absolute;
+    left: 70px;
+    top: 30%; }
+    @media only screen and (max-width: 430px) {
+      .header .container {
+        left: 30px; } }
+    @media only screen and (max-width: 380px) {
+      .header .container {
+        left: 0;
+        padding: 0 20px; } }
+  .header .title {
+    display: flex;
+    align-items: center;
+    font-size: 70px;
+    letter-spacing: 5px; }
+    @media only screen and (max-width: 380px) {
+      .header .title {
+        font-size: 55px; } }
+    @media only screen and (max-width: 325px) {
+      .header .title {
+        font-size: 36px; } }
+    .header .title img {
+      height: 130px;
+      width: 130px;
+      margin-right: 20px; }
+  .header .divider {
+    max-width: 20%;
+    height: 2px;
+    background-color: #fff;
+    margin: 25px 0; }
+    @media only screen and (max-width: 380px) {
+      .header .divider {
+        max-width: 40%; } }
+  .header .sub-title {
+    font-size: 25px; }
+    @media only screen and (max-width: 325px) {
+      .header .sub-title {
+        font-size: 22px; } }
+
+.icons {
+  margin-top: 20px; }
+  .icons i {
+    font-size: 30px;
+    font-weight: 500;
+    margin-right: 15px; }
+  .icons a {
+    text-decoration: none;
+    color: #fff; }
+
+.view {
+  margin: 30px 0;
+  font-size: 18px;
+  width: 25%; }
+  .view a {
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+    padding-bottom: 10px; }
+    .view a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 100%;
+      bottom: -3px;
+      background: #fff;
+      height: 2px;
+      transition-property: left right;
+      transition-duration: .35s;
+      transition-timing-function: ease-out; }
+  .view:hover a::after {
+    right: 0; }
+
+.content {
+  display: flex; }
+  @media only screen and (max-width: 430px) {
+    .content {
+      flex-direction: column; } }
+  .content .prj {
+    position: relative;
+    width: 100%;
+    background: #192B43;
+    overflow: hidden;
+    margin: 0; }
+    @media only screen and (max-width: 430px) {
+      .content .prj {
+        margin-bottom: 10px; } }
+    .content .prj a {
+      z-index: 10;
+      text-indent: 200%;
+      white-space: nowrap;
+      font-size: 0;
+      opacity: 0; }
+    .content .prj img {
+      width: 102%;
+      height: 100%;
+      object-fit: cover;
+      position: relative;
+      display: block;
+      opacity: 1;
+      transition: opacity .35s, transform .35s;
+      transform: translate3d(-10px, 0, 0);
+      backface-visibility: hidden; }
+    .content .prj figcaption {
+      pointer-events: none;
+      position: absolute;
+      padding: 30px 30px 0;
+      top: 0;
+      left: 0;
+      text-align: left; }
+      .content .prj figcaption h2 {
+        color: #fff;
+        text-transform: uppercase;
+        position: relative;
+        overflow: hidden;
+        letter-spacing: 3px;
+        font-size: 30px;
+        font-weight: 700;
+        padding-bottom: 16px;
+        opacity: 0;
+        transition: opacity .35s; }
+        .content .prj figcaption h2::after {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 3px;
+          background: #fff;
+          content: '';
+          transition: transform .35s;
+          transform: translate3d(-100%, 0, 0); }
+      .content .prj figcaption p {
+        padding: 15px 0;
+        opacity: 0;
+        transition: opacity .35s, transform .35s;
+        transform: translate3d(100%, 0, 0);
+        color: #fff; }
+    .content .prj:hover img {
+      opacity: .2;
+      transform: translate3d(0, 0, 0); }
+    .content .prj:hover figcaption h2 {
+      opacity: 1; }
+      .content .prj:hover figcaption h2::after {
+        transform: translate3d(0, 0, 0); }
+    .content .prj:hover figcaption p {
+      opacity: 1;
+      transform: translate3d(0, 0, 0); }
+
+.about {
+  background: url("../images/profile.JPG") no-repeat center;
+  background-size: cover;
+  color: #fff;
+  display: block; }
+  .about .wrapper {
+    background: rgba(25, 43, 67, 0.9);
+    padding: 30px 30px 50px; }
+
+.aboutText {
+  text-align: center;
+  margin: auto;
+  display: block;
+  max-width: 800px; }
+  .aboutText h2 {
+    font-size: 40px;
+    text-transform: uppercase;
+    margin: 30px auto; }
+    .aboutText h2::after {
+      content: '';
+      display: block;
+      overflow: hidden;
+      margin: 20px auto;
+      width: 10%;
+      height: 4px;
+      background-color: #fff; }
+      @media only screen and (max-width: 430px) {
+        .aboutText h2::after {
+          width: 20%; } }
+  .aboutText p {
+    line-height: 30px;
+    font-size: 18px;
+    margin-bottom: 20px; }
+  .aboutText .contact {
+    margin-top: 40px; }
+    .aboutText .contact p {
+      font-size: 16px;
+      margin-bottom: 10px;
+      line-height: normal; }
